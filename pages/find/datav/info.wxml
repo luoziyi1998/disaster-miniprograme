@@ -1,0 +1,35 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">{{time_slot}}地震数据报表</view>
+            <view class="page__desc">{{time}}</view>
+            <view class="weui-article__section" style="margin-top: 20px">
+                <view class="weui-article__title" style="color: #ff4400">统计信息</view>
+                <view class="container" style="margin-top: 20px">
+                    <ec-canvas ec="{{ecChinaMap}}" id="china_map"></ec-canvas>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p"style="margin-top: 20px">
+                        根据地震速报地震列表统计，{{time_slot}}{{statistical_info}}
+                    </view>
+                </view>
+                <view class="weui-article__title" style="color: #ff4400">地震统计</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        根据统计，{{time_slot}}{{eq_statistics}}
+                    </view>
+                    <view class="container">
+                        <ec-canvas ec="{{ecPie}}" id="pie"></ec-canvas>
+                    </view>
+                </view>
+                <view class="weui-article__title" style="color: #ff4400">地震分布</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        根据统计，{{time_slot}}{{eq_distribution}}
+
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

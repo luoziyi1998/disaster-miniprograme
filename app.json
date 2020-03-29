@@ -1,0 +1,37 @@
+{
+    "pages": [
+        "pages/earthquake/eq_list/eq_list",
+        "pages/find/datav/datav",
+        "pages/find/datav/info",
+        "pages/earthquake/eq_search/eq_search",
+        "pages/commpents/navbar/index"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ff5777",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "灾情速报",
+        "backgroundColor": "#ff5777",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "color": "#707070",
+        "selectedColor": "#ff5777",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/earthquake/eq_list/eq_list",
+                "text": "地震",
+                "iconPath": "pages/lib/images/list.png",
+                "selectedIconPath": "pages/lib/images/list1.png"
+            },
+            {
+                "pagePath": "pages/find/datav/datav",
+                "text": "统计",
+                "iconPath": "pages/lib/images/map.png",
+                "selectedIconPath": "pages/lib/images/map1.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

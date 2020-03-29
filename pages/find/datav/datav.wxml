@@ -1,0 +1,12 @@
+<view class="weui-cells__title">统计报表</view>
+<view style="text-align:center;margin-top: 15px">
+    <button bindtap="info" class="weui-btn_mini" data-id="1" size="mini" style="margin-right: 20px" type="default">近一月</button>
+    <button bindtap="info" class="weui-btn_mini" data-id="6" size="mini" style="margin-right: 20px" type="default">近半年</button>
+    <button bindtap="info" class="weui-btn_mini" data-id="12" size="mini" style="margin-right: 20px" type="default">近一年</button>
+</view>
+<view class="container" style="margin-top: -10px;">
+    <ec-canvas  ec="{{ecChinaMap}}" id="china_map" ></ec-canvas>
+    <view style="padding: 0 20px 0 20px;margin-top: 15px">
+        <text>{{eq_statistics}}</text>
+    </view>
+</view>

@@ -1,0 +1,33 @@
+<view class="page">
+    <view class="weui-search-bar">
+        <view bindtap="eq_search" class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" size="20" type="search"></icon>
+                <input class="weui-search-bar__input" placeholder="搜索" type="text"></input>
+            </view>
+            <label class="weui-search-bar__label">
+                <icon class="weui-icon-search" size="14" type="search"></icon>
+                <view class="weui-search-bar__text">搜索</view>
+            </label>
+        </view>
+    </view>
+    <official-account></official-account>
+    <view style="text-align:center;margin-top: 15px;color: #666" wx:if="{{nodata&list.length==0}}">服务器繁忙，请稍后下拉刷新加载数据</view>
+    <view class="weui-cells weui-cells_after-title" style="margin-top:-1px" wx:for="{{list}}" wx:key="id">
+        <!-- <view bindtap="eq_details" class="weui-cell" data-id="{{item.eq_id}}"> 添加点击-->
+        <view  class="weui-cell" data-id="{{item.eq_id}}">
+            <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                <div class="avatar">
+                    <span class="text-color-{{item.magnitude}}">{{item.magnitude}}</span>
+                </div>
+            </view>
+            <view class="weui-cell__bd">
+                <view>{{item.location}}
+                    <view style="font-size: 13px;color: #999;float:right">{{item.time}}</view>
+                </view>
+                <view style="font-size: 14px;color: #777;">震源深度：{{item.depth}}km</view>
+            </view>
+        </view>
+    </view>
+    <view style="text-align:center;color: #666" wx:if="{{showLoadMore}}">{{loadMoreText}}</view>
+</view>
